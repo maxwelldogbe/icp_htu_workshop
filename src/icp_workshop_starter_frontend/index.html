@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICP HTU Workshop</title>
+</head>
+
+<body>
+  <h1>ICP Counter App</h1>
+  <p>Count: <span id="count">0</span></p>
+  <button onclick="increment()">Increment</button>
+
+  <div id="root"></div>
+  <script type="module" src="/src/main.js">
+    import {icp_workshop_starter_backend} from "../declaration/icp_workshop_starter_backend"
+    
+    async function increment() {
+      const newCount = await icp_workshop_starter_backend.increment();
+      document.getElementById("count").innerText = newCount;
+    }
+
+    window.increment = increment;
+  </script>
+</body>
+
+</html>

@@ -1,18 +1,18 @@
 {
   "canisters": {
     "icp-workshop-starter-backend": {
-      "main": "src/icp-workshop-starter-backend/main.mo",
+      "main": "src/icp_workshop_starter_backend/main.mo",
       "type": "motoko"
     },
     "icp-workshop-starter-frontend": {
       "dependencies": [
-        "icp-workshop-starter-backend"
+        "icp_workshop_starter_backend"
       ],
       "source": [
-        "src/icp-workshop-starter-frontend/dist"
+        "src/icp_workshop_starter_frontend/dist"
       ],
       "type": "assets",
-      "workspace": "icp-workshop-starter-frontend"
+      "workspace": "icp_workshop_starter_frontend"
     }
   },
   "defaults": {
